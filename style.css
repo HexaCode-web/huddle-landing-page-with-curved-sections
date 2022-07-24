@@ -8,9 +8,9 @@ html,body{
 general layout
 ============================== */
 .container{
-    gap: 100px;
+    gap: 150px;
     display: grid;
-    grid-template-rows: 10% 70% 30%;
+    grid-template-rows: 10% 70% 20%;
 }
 
 /* ==============================
@@ -32,6 +32,7 @@ HEADER LAYOUT
     border: 1px solid #c083a5;
 }
 .header a{
+    margin-right: 5%;
     text-decoration: none;
     color:  #c083a5;
 }
@@ -44,6 +45,7 @@ CONTENT LAYOUT
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 50px;
 }
 .main-Header-text{
     display: flex;
@@ -61,7 +63,6 @@ CONTENT LAYOUT
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
     background-color: #fd53c0;
     color: white;
     border-radius: 50px;
@@ -106,7 +107,7 @@ FOOTER LAYOUT
 ============================== */
 .footer{
     margin-top: 200px;
-    background-image: url(images/bg-section-bottom-desktop-2.svg);
+    background-image: url(images/bg-footer-top-desktop.svg);
     background-color: #00252e;
     background-repeat: no-repeat;
     background-size: auto;
@@ -186,6 +187,7 @@ h3{
     font-size: 1.5rem;
 }
 .numbers span{
+    margin-left: 100px;
     font-size: 3rem;
     font-weight: 800;
 }
@@ -205,11 +207,11 @@ img{
     display: block;
 }
 .numbers .sent img{
-    margin-left: 80px;
+    margin-left: 90px;
     width: 20%;
 }
 .numbers .communities img{
-    margin-left: 90px;
+    margin-left: 100px;
     width: 15%;
 }
 .header img{
@@ -233,4 +235,95 @@ img{
 }
 .socials img{ 
     filter: invert(100%)
+}
+/* ==============================
+MEDIA
+============================== */
+@media (max-width:600px) {
+    .header img{
+        margin-left: 2%;
+        height: 5%;
+    }
+    .main-Header-text{
+        width: 80%;
+    }
+    .ContentButton{
+        min-width: 200px;
+        width: 300px;
+    }
+    .ContentButton p{
+        font-size: 1rem;
+    }
+    .main img{
+        width: 70%;
+    }
+    .numbers{
+        flex-direction: column;
+        gap: 100px;
+        align-items: center;
+        width: 100%;
+    }
+    .numbers .sent img , .numbers .communities img{
+        margin-left: 20%;
+    }
+    .numbers .sent span, .numbers .communities span{
+        margin-left: 15%;
+    }
+    .numbers span{
+        font-size: 6rem;
+    }
+    .communities{
+        width: 50%;
+    }
+    .sent{
+        width: 50%;
+    }
+    .numbers p{
+        text-align: center;
+        width: 110%;
+        font-size: 2rem;
+        margin: auto;
+    }
+    .section{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+    .SectionContent{
+        width: 100%;
+    }
+    .section img{
+        width: 100%;
+    }
+    .two{
+        flex-direction: column;
+    }
+    h3{
+        text-align: center;
+    }
+    .footer{
+        min-width: 450px;
+        flex-direction: column-reverse;
+        background-size:100%;
+        background-image: url(images/bg-section-bottom-desktop-2.svg);
+        margin-top: 10px;
+    }
+    .FooterContact{
+        width: 100%;
+    }
+    .FooterInfo{
+        margin-bottom: 20px;
+        margin-left: 1px;
+        margin-top: 50px;
+        width: 100%;
+    }
+    .inputSpace{
+        max-width: 500px;
+        width: 100%;
+    }
+    .email{
+        flex-direction: row-reverse;
+        gap:10px;
+        flex-wrap: wrap;
+    }
+    
 }
