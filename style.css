@@ -1,329 +1,402 @@
-html,body{
-    margin: auto;
-   width: 100%;
-   max-width: 1400px;
-   font-size: 16px;
+html,
+body {
+  margin: auto;
+  width: 100%;
+  max-width: 1400px;
+  font-size: 16px;
 }
 /* ==============================
 general layout
 ============================== */
-.container{
-    gap: 150px;
-    display: grid;
-    grid-template-rows: 10% 70% 20%;
+.container {
+  gap: 150px;
+  display: grid;
+  grid-template-rows: 10% 70% 20%;
 }
 
 /* ==============================
 HEADER LAYOUT
 ============================== */
-.header{
-    display: flex;
-    justify-content: space-between;
+.header {
+  display: flex;
+  justify-content: space-between;
+  animation: SlideInTop 1.5s ease-in both;
 }
 
-.HeaderButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-    width: 100px;
-    height: 50px;
-    border-radius: 50px;
-    border: 1px solid #c083a5;
+.main-Header-text {
+  animation: HeaderTextSlideIn 1.5s ease-in both;
 }
-.header a{
-    margin-right: 5%;
-    text-decoration: none;
-    color:  #c083a5;
+.HeaderButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid #c083a5;
+}
+.header a {
+  margin-right: 5%;
+  text-decoration: none;
+  color: #c083a5;
 }
 
 /* ==============================
 CONTENT LAYOUT
 ============================== */
-.main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
-.main-Header-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
+.main-Header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
 }
-.main p{
-    width: 50%;
-    margin: auto;
+.main p {
+  width: 50%;
+  margin: auto;
 }
-.ContentButton{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fd53c0;
-    color: white;
-    border-radius: 50px;
-    max-width: 600px;
-    min-width: 540px;
-    width: 540px;
-    height: 80px;
-}
-.main a {
-    font-family: 'ubuntu';
-    font-weight: 600;
-    text-decoration: none;
-    color: white;
+.ContentButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fd53c0;
+  color: white;
+  border-radius: 50px;
+  max-width: 600px;
+  min-width: 540px;
+  width: 540px;
+  height: 80px;
+  animation: ButtonSlideIn 1.5s ease-in both;
 }
 
-.numbers{
-    display: flex;
-    width: 70%;
-    justify-content: space-between;
+.main a {
+  font-family: "ubuntu";
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
 }
-.communities,.sent{
-    display: flex;
-    flex-direction: column;
+
+.numbers {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
 }
-.communities{
-    width: 55%;
+.communities,
+.sent {
+  display: flex;
+  flex-direction: column;
 }
-.sent{
-    width: 45%;
+.communities {
+  width: 55%;
 }
-.section{
-    gap: 2%;
-    margin-bottom: 40px;
-    display: flex;
+.sent {
+  width: 45%;
 }
-.SectionContent{
-    width: 55%;
-    margin-top: 150px;
+.section {
+  gap: 2%;
+  margin-bottom: 40px;
+  display: flex;
+}
+.SectionContent {
+  height: 100vh;
+  width: 55%;
+  margin-top: 150px;
+}
+.SlideInLeft {
+  animation: ButtonSlideIn 1.5s ease-in both;
+}
+.SlideInRight {
+  animation: HeaderTextSlideIn 1.5s ease-in both;
 }
 /* ==============================
 FOOTER LAYOUT
 ============================== */
-.footer{
-    margin-top: 200px;
-    background-image: url(images/bg-footer-top-desktop.svg);
-    background-color: #00252e;
-    background-repeat: no-repeat;
-    background-size: auto;
-    display: flex;
-    justify-content: space-between;
-    color: white;
+.footer {
+  margin-top: 200px;
+  background-image: url(images/bg-footer-top-desktop.svg);
+  background-color: #00252e;
+  background-repeat: no-repeat;
+  background-size: auto;
+  display: flex;
+  justify-content: space-between;
+  color: white;
 }
-.FooterInfo{
-    margin-left: 40px;
-    flex-direction: column;
-    margin-top: 200px;
-    display: flex;
-    width: 40%;
+.FooterInfo {
+  margin-left: 40px;
+  flex-direction: column;
+  margin-top: 200px;
+  display: flex;
+  width: 40%;
 }
-.FooterContact{
-    margin-top: 200px;
-    flex-direction: column;
-    width: 60%;
-    display: flex;
+.FooterContact {
+  margin-top: 200px;
+  flex-direction: column;
+  width: 60%;
+  display: flex;
 }
-.socials{
-    margin-left: 10px;
-    display: flex;
-    gap: 10px;
+.socials {
+  margin-left: 10px;
+  display: flex;
+  gap: 10px;
 }
-.email{
-    display: flex;
-    gap: 80px;
+.email {
+  display: flex;
+  gap: 80px;
 }
-.inputSpace{
-    width: 350px;
-    height: 50px;
-    background-color: white;
-    border-radius: 5px;
+.inputSpace {
+  width: 350px;
+  height: 50px;
+  background-color: white;
+  border-radius: 5px;
 }
-.Submit{
-    display: flex;
-    text-align: center;
-    font-size: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: 150px;
-    height: 50px;
-    background-color: #fd53c0;
-    border-radius: 5px;
+.Submit {
+  display: flex;
+  text-align: center;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 150px;
+  height: 50px;
+  background-color: #fd53c0;
+  border-radius: 5px;
 }
 /* ==============================
 TYPOGRAPHY
 ============================== */
-h1,h2,h3,h4{
-    font-family: "Poppins";
-    font-size: 2rem;
-    margin: auto;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins";
+  font-size: 2rem;
+  margin: auto;
 }
-h4{
-    font-size: 2rem;
-    margin: 0;
+h4 {
+  font-size: 2rem;
+  margin: 0;
 }
-.footer p{
-    width: 70%;
-    font-weight: 700;
-    font-family: 'ubuntu';
+.footer p {
+  width: 70%;
+  font-weight: 700;
+  font-family: "ubuntu";
 }
-h3{
-    margin-top: 100px;
-    font-size: 3rem;
+h3 {
+  margin-top: 100px;
+  font-size: 3rem;
 }
-.main p{
-    font-weight: 400;
-    font-family: 'ubuntu';
+.main p {
+  font-weight: 400;
+  font-family: "ubuntu";
 }
 .ContentButton p {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
-.numbers p{
-    font-size: 1.5rem;
+.numbers p {
+  font-size: 1.5rem;
 }
-.numbers span{
-    margin-left: 100px;
-    font-size: 3rem;
-    font-weight: 800;
+.numbers span {
+  margin-left: 100px;
+  font-size: 3rem;
+  font-weight: 800;
 }
-.SectionContent, h2{
-    text-align: start;
-    width: 60%;
-    margin-bottom: 20px;
+.SectionContent,
+h2 {
+  text-align: start;
+  width: 60%;
+  margin-bottom: 20px;
 }
-.SectionContent p{
-    width:60%;
-    font-size: 1.5rem;
+.SectionContent p {
+  width: 60%;
+  font-size: 1.5rem;
 }
 /* ==============================
 IMAGES
 ============================== */
-img{
-    display: block;
+img {
+  display: block;
+  animation: ButtonSlideIn 1.5s ease-in both;
 }
-.numbers .sent img{
-    margin-left: 90px;
-    width: 20%;
+
+.numbers .sent img {
+  margin-left: 90px;
+  width: 20%;
 }
-.numbers .communities img{
-    margin-left: 100px;
-    width: 15%;
+.numbers .communities img {
+  margin-left: 100px;
+  width: 15%;
 }
-.header img{
-    margin-top: 10px;
-    height: 10%;
+.header img {
+  margin-top: 10px;
+  height: 10%;
 }
-.main img{
-    width: 50%;
+.main img {
+  width: 50%;
 }
-.section img{
-    width: 45%;
+.section img {
+  width: 45%;
 }
-.FooterInfo .logo{
-    filter: invert(100%);
+.FooterInfo .logo {
+  filter: invert(100%);
   width: 40%;
 }
-.icon{
-    margin-right: 20px;
-    display: inline;
-    width: 20px;
+.icon {
+  margin-right: 20px;
+  display: inline;
+  width: 20px;
 }
-.socials img{ 
-    filter: invert(100%)
+.socials img {
+  filter: invert(100%);
+}
+#grow,
+#flowing,
+#user,
+.SectionContent,
+.SectionContent2,
+.SectionContent3 {
+  font-size: 2rem;
+  height: 100vh;
+}
+/* ==============================
+animations
+============================== */
+@keyframes HeaderTextSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+  80% {
+    opacity: 100%;
+    transform: translateX(60px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes ButtonSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(+1000px);
+  }
+  80% {
+    opacity: 100%;
+    transform: translateX(-60px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes SlideInTop {
+  0% {
+    opacity: 0;
+    transform: translatey(-1000px);
+  }
+  80% {
+    opacity: 100%;
+    transform: translatey(60px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 /* ==============================
 MEDIA
 ============================== */
-@media (max-width:600px) {
-    .header img{
-        margin-left: 2%;
-        height: 5%;
-    }
-    .main-Header-text{
-        width: 80%;
-    }
-    .ContentButton{
-        min-width: 200px;
-        width: 300px;
-    }
-    .ContentButton p{
-        font-size: 1rem;
-    }
-    .main img{
-        width: 70%;
-    }
-    .numbers{
-        flex-direction: column;
-        gap: 100px;
-        align-items: center;
-        width: 100%;
-    }
-    .numbers .sent img , .numbers .communities img{
-        margin-left: 20%;
-    }
-    .numbers .sent span, .numbers .communities span{
-        margin-left: 15%;
-    }
-    .numbers span{
-        font-size: 6rem;
-    }
-    .communities{
-        width: 50%;
-    }
-    .sent{
-        width: 50%;
-    }
-    .numbers p{
-        text-align: center;
-        width: 110%;
-        font-size: 2rem;
-        margin: auto;
-    }
-    .section{
-        width: 100%;
-        flex-direction: column-reverse;
-    }
-    .SectionContent{
-        width: 100%;
-    }
-    .section img{
-        width: 100%;
-    }
-    .two{
-        flex-direction: column;
-    }
-    h3{
-        text-align: center;
-    }
-    .footer{
-        min-width: 450px;
-        flex-direction: column-reverse;
-        background-size:100%;
-        background-image: url(images/bg-section-bottom-desktop-2.svg);
-        margin-top: 10px;
-    }
-    .FooterContact{
-        width: 100%;
-    }
-    .FooterInfo{
-        margin-bottom: 20px;
-        margin-left: 1px;
-        margin-top: 50px;
-        width: 100%;
-    }
-    .inputSpace{
-        max-width: 500px;
-        width: 100%;
-    }
-    .email{
-        flex-direction: row-reverse;
-        gap:10px;
-        flex-wrap: wrap;
-    }
-    
+@media (max-width: 600px) {
+  .header img {
+    margin-left: 2%;
+    height: 5%;
+  }
+  .main-Header-text {
+    width: 80%;
+  }
+  .ContentButton {
+    min-width: 200px;
+    width: 300px;
+  }
+  .ContentButton p {
+    font-size: 1rem;
+  }
+  .main img {
+    width: 70%;
+  }
+  .numbers {
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+    width: 100%;
+  }
+  .numbers .sent img,
+  .numbers .communities img {
+    margin-left: 20%;
+  }
+  .numbers .sent span,
+  .numbers .communities span {
+    margin-left: 15%;
+  }
+  .numbers span {
+    font-size: 6rem;
+  }
+  .communities {
+    width: 50%;
+  }
+  .sent {
+    width: 50%;
+  }
+  .numbers p {
+    text-align: center;
+    width: 110%;
+    font-size: 2rem;
+    margin: auto;
+  }
+  .section {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .SectionContent {
+    width: 100%;
+  }
+  .section img {
+    width: 100%;
+  }
+  .two {
+    flex-direction: column;
+  }
+  h3 {
+    text-align: center;
+  }
+  .footer {
+    min-width: 450px;
+    flex-direction: column-reverse;
+    background-size: 100%;
+    background-image: url(images/bg-section-bottom-desktop-2.svg);
+    margin-top: 10px;
+  }
+  .FooterContact {
+    width: 100%;
+  }
+  .FooterInfo {
+    margin-bottom: 20px;
+    margin-left: 1px;
+    margin-top: 50px;
+    width: 100%;
+  }
+  .inputSpace {
+    max-width: 500px;
+    width: 100%;
+  }
+  .email {
+    flex-direction: row-reverse;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
 }
